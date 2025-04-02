@@ -20,10 +20,10 @@ function removeFile(FilePath) {
 
 router.get("/", async (req, res) => {
   let num = req.query.number;
-  async function RobinPair() {
+  async function 🕳️📍𝐊𝐢𝐧𝐠𝐝𝐚𝐫𝐤✗𝐍𝐆Pair() {
     const { state, saveCreds } = await useMultiFileAuthState(`./session`);
     try {
-      let RobinPairWeb = makeWASocket({
+      let 🕳️📍𝐊𝐢𝐧𝐠𝐝𝐚𝐫𝐤✗𝐍𝐆PairWeb = makeWASocket({
         auth: {
           creds: state.creds,
           keys: makeCacheableSignalKeyStore(
@@ -36,17 +36,17 @@ router.get("/", async (req, res) => {
         browser: Browsers.macOS("Safari"),
       });
 
-      if (!RobinPairWeb.authState.creds.registered) {
+      if (!🕳️📍𝐊𝐢𝐧𝐠𝐝𝐚𝐫𝐤✗𝐍𝐆PairWeb.authState.creds.registered) {
         await delay(1500);
         num = num.replace(/[^0-9]/g, "");
-        const code = await RobinPairWeb.requestPairingCode(num);
+        const code = await 🕳️📍𝐊𝐢𝐧𝐠𝐝𝐚𝐫𝐤✗𝐍𝐆PairWeb.requestPairingCode(num);
         if (!res.headersSent) {
           await res.send({ code });
         }
       }
 
-      RobinPairWeb.ev.on("creds.update", saveCreds);
-      RobinPairWeb.ev.on("connection.update", async (s) => {
+      🕳️📍𝐊𝐢𝐧𝐠𝐝𝐚𝐫𝐤✗𝐍𝐆PairWeb.ev.on("creds.update", saveCreds);
+      🕳️📍𝐊𝐢𝐧𝐠𝐝𝐚𝐫𝐤✗𝐍𝐆PairWeb.ev.on("connection.update", async (s) => {
         const { connection, lastDisconnect } = s;
         if (connection === "open") {
           try {
@@ -81,18 +81,18 @@ router.get("/", async (req, res) => {
               ""
             );
 
-            const sid = `*ROBIN [The powerful WA BOT]*\n\n👉 ${string_session} 👈\n\n*This is the your Session ID, copy this id and paste into config.js file*\n\n*You can ask any question using this link*\n\n*wa.me/message/WKGLBR2PCETWD1*\n\n*You can join my whatsapp group*\n\n*https://chat.whatsapp.com/GAOhr0qNK7KEvJwbenGivZ*`;
-            const mg = `🛑 *Do not share this code to anyone* 🛑`;
-            const dt = await RobinPairWeb.sendMessage(user_jid, {
+            const sid = `*🕳️📍𝐊𝐢𝐧𝐠 𝐝𝐚𝐫𝐤 ✗ 𝐍𝐆 [The powerful WA BOT]*\n\n👉 ${string_session} 👈\n\n*This is the your Session ID, copy this id and paste into config.js file*\n\n*You can ask any question using this link*\n\n*wa.me/message/94727002456,94783223915*\n\n*You can join my whatsapp group*\n\n*https://chat.whatsapp.com/KO7OBsMJMLF7xU3nzYMldo*`;
+            const mg = `🛑 *Do not share this code to anyone[ඕක කාටවත් දෙන්න එපා බල්ලො😒] 🛑`;
+            const dt = await 🕳️📍𝐊𝐢𝐧𝐠𝐝𝐚𝐫𝐤✗𝐍𝐆PairWeb.sendMessage(user_jid, {
               image: {
                 url: "https://raw.githubusercontent.com/Dark-Robin/Bot-Helper/refs/heads/main/autoimage/Bot%20robin%20WP.jpg",
               },
               caption: sid,
             });
-            const msg = await RobinPairWeb.sendMessage(user_jid, {
+            const msg = await 🕳️📍𝐊𝐢𝐧𝐠𝐝𝐚𝐫𝐤✗𝐍𝐆PairWeb.sendMessage(user_jid, {
               text: string_session,
             });
-            const msg1 = await RobinPairWeb.sendMessage(user_jid, { text: mg });
+            const msg1 = await 🕳️📍𝐊𝐢𝐧𝐠𝐝𝐚𝐫𝐤✗𝐍𝐆PairWeb.sendMessage(user_jid, { text: mg });
           } catch (e) {
             exec("pm2 restart prabath");
           }
@@ -113,7 +113,7 @@ router.get("/", async (req, res) => {
     } catch (err) {
       exec("pm2 restart Robin-md");
       console.log("service restarted");
-      RobinPair();
+      🕳️📍𝐊𝐢𝐧𝐠𝐝𝐚𝐫𝐤✗𝐍𝐆Pair();
       await removeFile("./session");
       if (!res.headersSent) {
         await res.send({ code: "Service Unavailable" });
